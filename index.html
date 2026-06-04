@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Личный сайт Milena: проекты, навыки и контакты."
+    />
+    <title>Milena | Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Milena home">Milena</a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#projects">Проекты</a>
+        <a href="#skills">Навыки</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <p class="eyebrow">Personal website</p>
+          <h1>Привет, я Milena. Создаю свой первый сайт на GitHub Pages.</h1>
+          <p class="hero-text">
+            Это стартовая версия личного сайта: здесь будут мои проекты,
+            навыки, заметки и ссылки для связи.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#projects">Посмотреть проекты</a>
+            <a class="button secondary" href="https://github.com/milena28man-png">
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Краткая информация">
+          <span class="status-dot"></span>
+          <p class="panel-title">Сайт в разработке</p>
+          <p>
+            Следующий шаг: заменить эти тексты на настоящую информацию и
+            добавить первые проекты.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Обо мне</h2>
+        </div>
+        <p class="wide-text">
+          Я учусь создавать собственные веб-проекты и постепенно собираю здесь
+          свое портфолио. Этот сайт будет расти вместе с моими идеями,
+          практикой и новыми работами.
+        </p>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Work</p>
+          <h2>Проекты</h2>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <p class="card-kicker">Website</p>
+            <h3>Личный сайт</h3>
+            <p>
+              Первая версия сайта на GitHub Pages с адаптивной версткой и
+              базовыми разделами.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card-kicker">Next</p>
+            <h3>Будущий проект</h3>
+            <p>
+              Здесь появится следующая работа: приложение, страница, игра или
+              другой эксперимент.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card-kicker">Ideas</p>
+            <h3>Идеи</h3>
+            <p>
+              Место для заметок о том, что хочется изучить, попробовать и
+              показать на сайте.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2>Навыки</h2>
+        </div>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>GitHub Pages</li>
+        </ul>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Связаться</h2>
+          <p>
+            Лучшее место для связи сейчас - GitHub. Позже сюда можно добавить
+            email, Telegram, LinkedIn или другие ссылки.
+          </p>
+        </div>
+        <a class="button primary" href="https://github.com/milena28man-png">
+          Открыть GitHub
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Milena. Published with GitHub Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
