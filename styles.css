@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  --bg: #f7f4ee;
+  --bg: #dff3ff;
   --text: #171717;
   --muted: #64605a;
   --line: #ddd5ca;
@@ -46,7 +46,7 @@ a {
   gap: 1rem;
   padding: 1rem clamp(1rem, 4vw, 4rem);
   border-bottom: 1px solid rgba(221, 213, 202, 0.75);
-  background: rgba(247, 244, 238, 0.88);
+  background: rgba(223, 243, 255, 0.88);
   backdrop-filter: blur(16px);
 }
 
