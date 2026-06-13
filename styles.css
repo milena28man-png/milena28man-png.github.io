@@ -24,8 +24,10 @@ html {
 body {
   margin: 0;
   background:
+    linear-gradient(rgb(245 247 255 / 0.76), rgb(245 247 255 / 0.86)),
     linear-gradient(135deg, rgb(0 167 167 / 0.12), transparent 32rem),
     linear-gradient(315deg, rgb(72 0 255 / 0.18), transparent 34rem),
+    url("assets/images/bg.png") center / cover fixed,
     var(--bg);
   color: var(--text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
