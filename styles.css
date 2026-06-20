@@ -91,6 +91,10 @@ main {
   padding: clamp(3rem, 8vw, 7rem) 0;
 }
 
+.apps-hero {
+  min-height: min(680px, calc(100vh - 5rem));
+}
+
 .hero-content {
   max-width: 760px;
 }
@@ -235,6 +239,91 @@ h3 {
 .card {
   min-height: 14rem;
   padding: 1.25rem;
+}
+
+.apps-preview .actions {
+  margin-top: 1.5rem;
+}
+
+.calculator {
+  width: min(100%, 420px);
+  min-height: 0;
+  padding: 1rem;
+}
+
+.calculator-display {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--ink);
+  color: white;
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+  text-align: right;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.calculator-key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.75rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.92);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.25rem;
+  font-weight: 800;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.calculator-key:hover {
+  background: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+.calculator-key:focus-visible {
+  outline: 3px solid rgb(0 167 167 / 0.35);
+  outline-offset: 2px;
+}
+
+.calculator-key.operator {
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+}
+
+.calculator-key.clear {
+  background: rgb(0 167 167 / 0.12);
+  color: #007575;
+}
+
+.calculator-key.equals {
+  grid-row: span 2;
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 12px 26px rgb(72 0 255 / 0.2);
+}
+
+.calculator-key.zero {
+  grid-column: span 3;
 }
 
 .card p:last-child,

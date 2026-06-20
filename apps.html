@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="JavaScript-приложения Милены: калькулятор и будущие проекты."
+    />
+    <title>Мои приложения | Милена</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Главная страница Милены">Милена</a>
+      <nav class="nav" aria-label="Навигация по сайту">
+        <a href="index.html#about">Обо мне</a>
+        <a href="index.html#projects">Проекты</a>
+        <a href="apps.html">Мои приложения</a>
+        <a href="index.html#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero apps-hero">
+        <div class="hero-content">
+          <p class="eyebrow">JavaScript apps</p>
+          <h1>Мои приложения</h1>
+          <p class="hero-text">
+            На этой странице будут собираться небольшие приложения, которые я
+            делаю на JavaScript.
+          </p>
+          <div class="actions">
+            <a class="button secondary" href="index.html">На главную</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Информация о приложениях">
+          <span class="status-dot"></span>
+          <p class="panel-title">Первое приложение готово</p>
+          <p>
+            Ниже есть простой калькулятор для сложения, вычитания, умножения и
+            деления.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="calculator">
+        <div class="section-heading">
+          <p class="eyebrow">Application</p>
+          <h2>Калькулятор</h2>
+        </div>
+
+        <article class="calculator card" aria-label="Калькулятор">
+          <output class="calculator-display" id="calculator-display" aria-live="polite">0</output>
+          <div class="calculator-keys">
+            <button class="calculator-key clear" type="button" data-action="clear">C</button>
+            <button class="calculator-key operator" type="button" data-operator="÷">÷</button>
+            <button class="calculator-key operator" type="button" data-operator="×">×</button>
+            <button class="calculator-key operator" type="button" data-operator="-">-</button>
+
+            <button class="calculator-key" type="button" data-number="7">7</button>
+            <button class="calculator-key" type="button" data-number="8">8</button>
+            <button class="calculator-key" type="button" data-number="9">9</button>
+            <button class="calculator-key operator" type="button" data-operator="+">+</button>
+
+            <button class="calculator-key" type="button" data-number="4">4</button>
+            <button class="calculator-key" type="button" data-number="5">5</button>
+            <button class="calculator-key" type="button" data-number="6">6</button>
+            <button class="calculator-key equals" type="button" data-action="equals">=</button>
+
+            <button class="calculator-key" type="button" data-number="1">1</button>
+            <button class="calculator-key" type="button" data-number="2">2</button>
+            <button class="calculator-key" type="button" data-number="3">3</button>
+
+            <button class="calculator-key zero" type="button" data-number="0">0</button>
+            <button class="calculator-key" type="button" data-action="decimal">.</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Милена. Published with GitHub Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="calculator.js"></script>
+  </body>
+</html>
