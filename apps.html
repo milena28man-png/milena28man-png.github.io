@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -42,12 +43,104 @@
         </div>
         <div class="hero-panel" aria-label="Информация о приложениях">
           <span class="status-dot"></span>
-          <p class="panel-title">Первое приложение готово</p>
+          <p class="panel-title">Три приложения готовы</p>
           <p>
-            Ниже есть простой калькулятор для сложения, вычитания, умножения и
-            деления.
+            Ниже есть прогноз погоды, рандомайзер чисел и простой
+            калькулятор.
           </p>
         </div>
+      </section>
+
+      <section class="section" id="weather">
+        <div class="section-heading">
+          <p class="eyebrow">Application</p>
+          <h2>Прогноз погоды</h2>
+        </div>
+
+        <article class="weather-app card" aria-label="Прогноз погоды в Suwanee, Georgia">
+          <div class="weather-topline">
+            <div>
+              <p class="card-kicker">Suwanee, GA, USA</p>
+              <h3>Погода сейчас</h3>
+            </div>
+            <button class="button secondary weather-refresh" type="button" id="weather-refresh">
+              Обновить
+            </button>
+          </div>
+
+          <div class="weather-status" id="weather-status" role="status">
+            Загружаю прогноз...
+          </div>
+
+          <div class="weather-current" id="weather-current" hidden>
+            <div>
+              <p class="weather-temperature" id="weather-temperature">--°C</p>
+              <p class="weather-condition" id="weather-condition">--</p>
+            </div>
+            <dl class="weather-details">
+              <div>
+                <dt>Влажность</dt>
+                <dd id="weather-humidity">--%</dd>
+              </div>
+              <div>
+                <dt>Ветер</dt>
+                <dd id="weather-wind">-- км/ч</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="weather-forecast" id="weather-forecast" hidden></div>
+        </article>
+      </section>
+
+      <section class="section" id="dice-randomizer">
+        <div class="section-heading">
+          <p class="eyebrow">Application</p>
+          <h2>Рандомайзер чисел</h2>
+        </div>
+
+        <article class="dice-app card" aria-label="Рандомайзер чисел с кубиком">
+          <div class="dice-layout">
+            <div class="dice-stage">
+              <div class="dice" id="dice" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="dice-controls">
+              <p class="card-kicker">Random number</p>
+              <h3>Бросить кубик</h3>
+              <p class="dice-description">
+                Выбери диапазон и нажми кнопку. Кубик покрутится и покажет
+                случайное число.
+              </p>
+
+              <div class="dice-inputs">
+                <label>
+                  От
+                  <input id="dice-min" type="number" value="1" />
+                </label>
+                <label>
+                  До
+                  <input id="dice-max" type="number" value="6" />
+                </label>
+              </div>
+
+              <button class="button primary dice-roll" type="button" id="dice-roll">
+                Бросить
+              </button>
+
+              <p class="dice-result" id="dice-result" role="status">
+                Нажми «Бросить», чтобы получить число.
+              </p>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section class="section" id="calculator">
@@ -90,6 +183,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="weather.js"></script>
+    <script src="dice.js"></script>
     <script src="calculator.js"></script>
   </body>
 </html>

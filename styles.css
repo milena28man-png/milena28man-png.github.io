@@ -245,6 +245,274 @@ h3 {
   margin-top: 1.5rem;
 }
 
+.weather-app {
+  min-height: 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.weather-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.weather-refresh {
+  min-height: 2.75rem;
+  white-space: nowrap;
+}
+
+.weather-status {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.weather-current {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border-radius: 8px;
+  background: var(--ink);
+  color: white;
+}
+
+.weather-temperature {
+  margin-bottom: 0.35rem;
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 800;
+  line-height: 0.95;
+}
+
+.weather-condition {
+  margin-bottom: 0;
+  color: rgb(255 255 255 / 0.78);
+  font-weight: 800;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  min-width: min(100%, 280px);
+  margin: 0;
+}
+
+.weather-details div {
+  padding: 0.85rem;
+  border: 1px solid rgb(255 255 255 / 0.22);
+  border-radius: 8px;
+}
+
+.weather-details dt {
+  color: rgb(255 255 255 / 0.68);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.weather-details dd {
+  margin: 0.2rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.weather-forecast {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.weather-day {
+  min-height: 9rem;
+  padding: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.78);
+}
+
+.weather-day-name,
+.weather-day-temp {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.weather-day-condition,
+.weather-day-rain {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.weather-day p {
+  margin-bottom: 0.35rem;
+}
+
+.dice-app {
+  min-height: 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.dice-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(1.25rem, 4vw, 2rem);
+  align-items: center;
+}
+
+.dice-stage {
+  display: grid;
+  min-height: 18rem;
+  place-items: center;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgb(0 167 167 / 0.16), transparent),
+    var(--accent-soft);
+}
+
+.dice {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: min(11rem, 58vw);
+  aspect-ratio: 1;
+  padding: 1.25rem;
+  border: 2px solid rgb(36 18 77 / 0.1);
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 18px 42px rgb(36 18 77 / 0.18);
+}
+
+.dice.rolling {
+  animation: dice-toss 900ms ease-in-out;
+}
+
+.dice span {
+  width: 1.15rem;
+  height: 1.15rem;
+  place-self: center;
+  border-radius: 50%;
+  background: var(--ink);
+  opacity: 0;
+}
+
+.dice[data-value="1"] span:nth-child(1),
+.dice[data-value="3"] span:nth-child(1),
+.dice[data-value="5"] span:nth-child(1) {
+  grid-column: 2;
+  grid-row: 2;
+  opacity: 1;
+}
+
+.dice[data-value="2"] span:nth-child(1),
+.dice[data-value="3"] span:nth-child(2),
+.dice[data-value="4"] span:nth-child(1),
+.dice[data-value="5"] span:nth-child(2),
+.dice[data-value="6"] span:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  opacity: 1;
+}
+
+.dice[data-value="2"] span:nth-child(2),
+.dice[data-value="3"] span:nth-child(3),
+.dice[data-value="4"] span:nth-child(2),
+.dice[data-value="5"] span:nth-child(3),
+.dice[data-value="6"] span:nth-child(2) {
+  grid-column: 3;
+  grid-row: 3;
+  opacity: 1;
+}
+
+.dice[data-value="4"] span:nth-child(3),
+.dice[data-value="5"] span:nth-child(4),
+.dice[data-value="6"] span:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+  opacity: 1;
+}
+
+.dice[data-value="4"] span:nth-child(4),
+.dice[data-value="5"] span:nth-child(5),
+.dice[data-value="6"] span:nth-child(4) {
+  grid-column: 1;
+  grid-row: 3;
+  opacity: 1;
+}
+
+.dice[data-value="6"] span:nth-child(5) {
+  grid-column: 1;
+  grid-row: 2;
+  opacity: 1;
+}
+
+.dice[data-value="6"] span:nth-child(6) {
+  grid-column: 3;
+  grid-row: 2;
+  opacity: 1;
+}
+
+.dice-description,
+.dice-result {
+  color: var(--muted);
+}
+
+.dice-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1.25rem 0;
+}
+
+.dice-inputs label {
+  display: grid;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.dice-inputs input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.9);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 800;
+}
+
+.dice-roll {
+  margin-bottom: 1rem;
+}
+
+@keyframes dice-toss {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  35% {
+    transform: translateY(-24px) rotate(145deg) scale(1.08);
+  }
+
+  70% {
+    transform: translateY(8px) rotate(285deg) scale(0.96);
+  }
+
+  100% {
+    transform: translateY(0) rotate(360deg) scale(1);
+  }
+}
+
 .calculator {
   width: min(100%, 420px);
   min-height: 0;
@@ -391,9 +659,18 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .weather-current,
   .contact {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .weather-forecast {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dice-layout {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -405,5 +682,18 @@ h3 {
 
   .button {
     width: 100%;
+  }
+
+  .weather-topline {
+    flex-direction: column;
+  }
+
+  .weather-details,
+  .weather-forecast {
+    grid-template-columns: 1fr;
+  }
+
+  .dice-inputs {
+    grid-template-columns: 1fr;
   }
 }
